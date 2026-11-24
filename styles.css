@@ -1,0 +1,41 @@
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header, footer {
+  background: rgb(141, 144, 37);
+  color: rgb(36, 12, 12);
+  padding: 15px;
+}
+
+nav a {
+  color: white;
+  margin-right: 10px;
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 15px;
+}
+
+article {
+  border: 1px solid gray;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"],
+input[type="date"], select, textarea {
+  display: block;
+  width: 100%;
+}
+
+:focus {
+  outline: 3px solid orange;
+}

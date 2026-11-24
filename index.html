@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="City Hospital - services, doctors and appointment booking.">
+  <title>City Hospital</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top of the page -->
+  <header>
+    <h1>City Hospital</h1>
+    <nav aria-label="Main menu">
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#appointment">Appointment</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <article>
+        <h3>Cardiology</h3>
+        <p>Heart care and check-ups.</p>
+      </article>
+      <article>
+        <h3>Pediatrics</h3>
+        <p>Healthcare for children.</p>
+      </article>
+    </section>
+
+    <section id="doctors">
+      <h2>Our Doctors</h2>
+      <article>
+        <h3>Dr. Rao</h3>
+        <p>Cardiologist</p>
+      </article>
+      <article>
+        <h3>Dr. Mehta</h3>
+        <p>Pediatrician</p>
+      </article>
+    </section>
+
+    <section id="appointment">
+      <h2>Book an Appointment</h2>
+
+      <form id="myForm" onsubmit="return checkForm()">
+
+        <label for="name">Full name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+
+        <label for="phone">Phone number (10 digits)</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+        <label for="dept">Department</label>
+        <select id="dept" required>
+          <option value="">Choose one</option>
+          <option>Cardiology</option>
+          <option>Pediatrics</option>
+        </select>
+
+        <label for="date">Preferred date</label>
+        <input type="date" id="date" required>
+
+        <fieldset>
+          <legend>Is this your first visit?</legend>
+          <input type="radio" id="yes" name="visit" required>
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="visit">
+          <label for="no">No</label>
+        </fieldset>
+
+        <label for="notes">Reason for visit</label>
+        <textarea id="notes" rows="3"></textarea>
+
+        <button type="submit">Book appointment</button>
+      </form>
+
+      <p id="message" role="status"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Contact: hospital@city.com</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
